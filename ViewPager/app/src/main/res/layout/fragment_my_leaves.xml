@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myLeaves">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="10dp"
+      ></androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#2e2d2d"
+        android:elevation="0dp"
+        android:fontFamily="sans-serif-black"
+        android:minHeight="48dp"
+        android:text="Leave Quota"
+        android:textColor="@color/white"
+        android:textSize="11sp">
+
+    </Button>
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="207dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#1bc446"
+        android:elevation="0dp"
+        android:fontFamily="sans-serif-black"
+        android:minHeight="48dp"
+        android:text="Apply Leave"
+        android:textColor="@color/white"
+        android:textSize="11sp">
+
+    </Button>
+
+</FrameLayout>
