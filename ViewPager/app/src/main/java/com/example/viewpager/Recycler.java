@@ -1,6 +1,7 @@
 package com.example.viewpager;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,11 @@ public class Recycler extends RecyclerView.Adapter<Recycler.ViewHolder> {
         holder.txtdateto.setText(arrEvents.get(position).l_dateto);
         holder.txtnod.setText(arrEvents.get(position).l_noofdays);
         holder.txtstatus.setText(arrEvents.get(position).l_status);
+
+
+
+
+
 
     }
 
