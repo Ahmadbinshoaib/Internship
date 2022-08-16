@@ -33,6 +33,7 @@ public class History extends Fragment {
     private String mParam1;
     private String mParam2;
     ApiInterface apiInterface;
+    List<Structure> postList;
 
     public History() {
         // Required empty public constructor
@@ -77,13 +78,17 @@ public class History extends Fragment {
             public void onResponse(Call<List<Structure>> call, Response<List<Structure>> response) {
                 if(response.body().size()>0)
                 {
-                    List<Structure> postList = response.body();
-                    Recycler adapter = new Recycler(getContext(), postList);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+//                    if(postList.size()>0)
+//                    {
+//                        Toast.makeText(getContext(), "No Need", Toast.LENGTH_SHORT).show();
+//                    }
+//                    else {
+                        postList = response.body();
+                        Recycler adapter = new Recycler(getContext(), postList);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                        recyclerView.setAdapter(adapter);
+                        Toast.makeText(getContext(), "List is not empty", Toast.LENGTH_SHORT).show();
 
-                    recyclerView.setAdapter(adapter);
-
-                    Toast.makeText(getContext(), "List is not empty", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
