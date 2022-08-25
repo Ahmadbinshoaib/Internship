@@ -12,6 +12,7 @@ import com.example.apiuserauthenticationmvvmarhitecture.viewModels.LogInViewMode
 
 public class MainActivity extends AppCompatActivity {
 
+
     private ActivityMainBinding activityMainBinding;
     private LogInViewModel logInViewModel;
 

@@ -1,9 +1,13 @@
 package com.example.apiuserauthenticationmvvmarhitecture.responses;
 
+import androidx.room.Entity;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+
 public class LogInResponse {
+
 
 
     @SerializedName("user")

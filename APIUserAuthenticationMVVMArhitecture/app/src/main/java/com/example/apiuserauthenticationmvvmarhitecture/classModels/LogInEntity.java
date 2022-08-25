@@ -1,41 +1,26 @@
-package com.example.apiuserauthenticationmvvmarhitecture.responses;
+package com.example.apiuserauthenticationmvvmarhitecture.classModels;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-
-public class User {
-
-    @SerializedName("age")
-    @Expose
+@Entity(tableName = "users")
+public class LogInEntity {
+    @ColumnInfo(name = "age")
     private Integer age;
-
-
-    @SerializedName("_id")
-    @Expose
+    @PrimaryKey(autoGenerate = false)
+    @NonNull
     private String id;
-
-    @SerializedName("name")
-    @Expose
+    @ColumnInfo(name = "name")
     private String name;
-
-    @SerializedName("email")
-    @Expose
+    @ColumnInfo(name = "email")
     private String email;
-
-    @SerializedName("createdAt")
-    @Expose
+    @ColumnInfo(name = "createdAt")
     private String createdAt;
-
-    @SerializedName("updatedAt")
-    @Expose
+    @ColumnInfo(name = "updatedAt")
     private String updatedAt;
-
-    @SerializedName("__v")
-    @Expose
+    @ColumnInfo(name = "v")
     private Integer v;
 
     public Integer getAge() {
@@ -94,4 +79,13 @@ public class User {
         this.v = v;
     }
 
+    public LogInEntity(Integer age, String id, String name, String email, String createdAt, String updatedAt, Integer v) {
+        this.age = age;
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.v = v;
+    }
 }

@@ -1,49 +1,37 @@
 package com.example.apiuserauthenticationmvvmarhitecture.responses;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-
-public class User {
-
-    @SerializedName("age")
+public class Data {
+    @SerializedName("completed")
     @Expose
-    private Integer age;
-
-
+    private Boolean completed;
     @SerializedName("_id")
     @Expose
     private String id;
-
-    @SerializedName("name")
+    @SerializedName("description")
     @Expose
-    private String name;
-
-    @SerializedName("email")
+    private String description;
+    @SerializedName("owner")
     @Expose
-    private String email;
-
+    private String owner;
     @SerializedName("createdAt")
     @Expose
     private String createdAt;
-
     @SerializedName("updatedAt")
     @Expose
     private String updatedAt;
-
     @SerializedName("__v")
     @Expose
     private Integer v;
 
-    public Integer getAge() {
-        return age;
+    public Boolean getCompleted() {
+        return completed;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setCompleted(Boolean completed) {
+        this.completed = completed;
     }
 
     public String getId() {
@@ -54,20 +42,20 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getEmail() {
-        return email;
+    public String getOwner() {
+        return owner;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     public String getCreatedAt() {
@@ -93,5 +81,4 @@ public class User {
     public void setV(Integer v) {
         this.v = v;
     }
-
 }
